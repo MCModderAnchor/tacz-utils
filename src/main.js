@@ -1,5 +1,7 @@
-import {loadTACZLanguage} from "./utils/i18nloader";
+import {loadTACZLanguage} from "./utils/i18n_loader";
 import TACZ from "../package.json";
+import {openIndexMenuAction} from "./menu/index_menu";
+import {initCacheTacZPackAction, taczCacheMenuAction} from "./menu/cache_menu";
 
 (function () {
     Plugin.register(TACZ.name, {
@@ -14,12 +16,18 @@ import TACZ from "../package.json";
         await_loading: true,
         onload() {
             loadTACZLanguage();
-            new BarMenu("tacz_utils", []);
+            initCacheTacZPackAction();
+            new BarMenu("tacz_utils", [
+                "action.tacz_utils.index_menu",
+                taczCacheMenuAction
+            ]);
             MenuBar.update();
         },
         onunload() {
             delete MenuBar.menues["tacz_utils"];
             MenuBar.update();
+
+            openIndexMenuAction.delete();
         }
     });
 })();

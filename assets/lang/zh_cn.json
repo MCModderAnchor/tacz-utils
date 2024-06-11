@@ -1,5 +1,9 @@
 {
   "info.tacz_utils.name": "永恒枪械工坊模组插件",
   "info.tacz_utils.description": "专门用于制作枪械包的 Blockbench 插件",
-  "menu.tacz_utils": "永恒枪械"
+  "menu.tacz_utils": "永恒枪械",
+  "menu.tacz_utils.index_menu": "加载枪包",
+  "menu.tacz_utils.cache_menu": "历史",
+  "menu.tacz_utils.cache_menu.clear": "清除历史",
+  "dialog.tacz_utils.index_menu.title": "索引菜单"
 }

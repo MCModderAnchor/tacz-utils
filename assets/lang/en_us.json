@@ -5,5 +5,10 @@
   "menu.tacz_utils.index_menu": "Load Gun Pack",
   "menu.tacz_utils.cache_menu": "History",
   "menu.tacz_utils.cache_menu.clear": "Clear History",
-  "dialog.tacz_utils.index_menu.title": "Index Menu"
+  "dialog.tacz_utils.index_menu.title": "Index Menu",
+  "button.tacz_utils.index_menu.guns": "Guns",
+  "button.tacz_utils.index_menu.attachments": "Attachments",
+  "button.tacz_utils.index_menu.ammo": "Ammo",
+  "button.tacz_utils.index_menu.new_index": "New Index",
+  "button.tacz_utils.index_menu.edit": "Edit"
 }

@@ -1,4 +1,5 @@
 import indexDialogVue from "../vue/index_dialog.vue";
+import {getFirstAvailableType} from "../utils/type_check";
 
 export var openIndexMenuDialog = function openIndexMenuDialog(packDir, allNamespace) {
     let indexMenuDialog = new Dialog({
@@ -13,6 +14,11 @@ export var openIndexMenuDialog = function openIndexMenuDialog(packDir, allNamesp
             page: Object.keys(allNamespace)[0],
             actions: [],
             onPageSwitch(page) {
+                let child = indexMenuDialog.content_vue.$children[0];
+                if (child.namespace !== page) {
+                    child.namespace = page;
+                    child.type = getFirstAvailableType(`${packDir}/${page}`)
+                }
             }
         },
         component: {
